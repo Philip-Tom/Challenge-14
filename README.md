@@ -61,3 +61,4 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 
 ## ScreenShots
+![Dashboard](<assets/Screenshot 2024-02-15 140229.png>)
