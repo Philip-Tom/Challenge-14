@@ -9,6 +9,8 @@ Tech Blog is a CMS-style blog site where developers can publish articles, blog p
 - [Technologies Used](#technologies-used)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
+- [Walkthrough Video](#walkthrough-video)
+- [ScreenShots](#screenShots)
 
 
 
