@@ -9,8 +9,6 @@ Tech Blog is a CMS-style blog site where developers can publish articles, blog p
 - [Technologies Used](#technologies-used)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
-- [Walkthrough Video](#walkthrough-video)
-- [ScreenShots](#screenShots)
 
 
 
@@ -24,7 +22,6 @@ To run the application locally, follow these steps:
     ```
 3. Create a `.env` file based on the provided `.env.example` file and configure your environment variables.
 4. Set up your MySQL database and update the connection details in the `.env` file.
-5. Create a Schema `blog_db` on MySQL.
 6. Start the application by running `npm start`.
 
 ## Usage

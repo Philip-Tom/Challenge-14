@@ -1,19 +1,8 @@
 <style>
-  .navbar-nav .nav-link { font-weight: normal; }
-  .navbar-brand {
-    position: relative;
-  }
-  .navbar-brand::after {
-    content: '';
-    position: absolute;
-    left: 5%;
-    top: 15%;
-    width: 100%;
-    height: 100%;
-    background-color: #a5a5a5;
-    z-index: -1;
-    border-radius: 5px;
-  }
+  .navbar-nav .nav-link { font-weight: normal; } .navbar-brand { position:
+  relative; } .navbar-brand::after { content: ''; position: absolute; left: 5%;
+  top: 15%; width: 100%; height: 100%; background-color: #a5a5a5; z-index: -1;
+  border-radius: 5px; }
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
@@ -26,12 +15,17 @@
         <li class="nav-item">
           <a class="nav-link" href="/dashboard">Dashboard</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/users/logout">Logout</a>
-        </li>
+
+        {{#if loggedIn}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/logout">Logout</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+        {{/if}}
+
       </ul>
     </div>
     <a class="navbar-brand" href="/" style="color: #221110;">The Tech Blog</a>
@@ -45,8 +39,11 @@
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon">
-        <i class="bx bx-menu toggler-icon"></i>
+        <span class="material-symbols-outlined">
+          menu
+        </span>
       </span>
     </button>
   </div>
+
 </nav>

@@ -1,16 +1,22 @@
-<div class="container-sm mx-auto">
+<div
+  class="container-sm mx-auto"
+  onclick="window.location.href='/posts/{{id}}'"
+>
   {{#each posts}}
-  <div class="card mb-3">
-    
-    <div class="card-header">
-      <h2 class="card-title">{{title}}</h2>
-      <p class="card-created-at">Posted by {{loggedIn}} {{user.username}} on {{formatDate createdAt}}</p>
-    </div>
-    <div class="card-body">
-      <p>{{content}}</p>
-      <a href="/posts/{{id}}" class="read-more">Read More</a>
-    </div>
-  </div>
+    <a href="/posts/{{id}}" style="text-decoration: none;">
+      <div class="card mb-3" style="border-radius: 0; border-width: 2px;">
+        <div class="card-header" style="border-radius: 0;">
+          <h2 class="card-title">{{title}}</h2>
+          <p class="card-created-at" style="font-weight: normal;">Posted by
+            {{loggedIn}}
+            {{user.username}}
+            on
+            {{formatDate createdAt}}</p>
+        </div>
+        <div class="card-body">
+          <p>{{content}}</p>
+        </div>
+      </div>
+    </a>
   {{/each}}
 </div>
-

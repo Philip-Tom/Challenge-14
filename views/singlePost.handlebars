@@ -2,11 +2,10 @@
 
 
   {{#if post}}
-    <div class="card mb-3">
-      <div class="card-header">
+    <div class="card mb-3" style="border-radius: 0; border-width: 2px;">
+      <div class="card-header" style="border-radius: 0;">
         <h2 class="card-title">{{post.title}}</h2>
-        <p class="card-created-at">Posted by <span class="user">{{user.username}}</span> on <span
-          class="time">{{formatDate post.createdAt}}</span></p>
+        <p class="card-created-at">Posted by <span >{{user.username}}</span> on <span>{{formatDate post.createdAt}}</span></p>
       </div>
       <div class="card-body">
         <p>{{post.content}}</p>
@@ -37,8 +36,8 @@
               <div class="comment-body">
                 <p>{{this.comment_text}}</p>
                 {{#if (eq this.user.id ../currentUserID)}}
-                  <button class="btn btn-custom delete-comment" data-comment-id="{{this.id}}"><i
-                    class='bx bx-trash-alt'></i></button>
+                  <button class="btn btn-custom delete-comment" data-comment-id="{{this.id}}">
+                    <span class="material-symbols-outlined">delete</span></button>
                 {{/if}}
               </div>
             </li>
