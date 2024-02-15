@@ -9,6 +9,7 @@ Tech Blog is a CMS-style blog site where developers can publish articles, blog p
 - [Technologies Used](#technologies-used)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
+- [Heroku Url](#heroku-url)
 
 
 
@@ -58,6 +59,9 @@ The project follows the MVC (Model-View-Controller) design pattern. Below is an 
 Contributions are welcome! If you'd like to contribute to the project, please fork the repository, create a new branch, make your changes, and submit a pull request.
 
 ## Walkthrough Video
+
+https://github.com/Philip-Tom/Challenge-14/assets/147503829/51c9d564-33c4-4b9f-b6b6-daa71e2e35cd
+
 
 
 ## ScreenShots
