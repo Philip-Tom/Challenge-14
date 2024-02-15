@@ -1,0 +1,60 @@
+<div class="container-sm mx-auto">
+
+
+  {{#if post}}
+    <div class="card mb-3">
+      <div class="card-header">
+        <h2 class="card-title">{{post.title}}</h2>
+        <p class="card-created-at">Posted by <span class="user">{{user.username}}</span> on <span
+          class="time">{{formatDate post.createdAt}}</span></p>
+      </div>
+      <div class="card-body">
+        <p>{{post.content}}</p>
+      </div>
+   </div>
+
+    {{#if loggedIn}}
+      <form class="comment-form mb-3" action="/comments/" method="post">
+        <div class="form-group">
+          <label for="comment">Write a Comment:</label>
+          <textarea class="form-control" id="comment" name="comment_text"></textarea>
+          <input type="hidden" name="post_id" value="{{post.id}}" />
+        </div>
+          <button type="submit" class="btn btn-custom">Submit</button>
+      </form>         
+    {{/if}}
+
+    {{#if post.comments.length}}
+      <div class="comments-section mb-3">
+        <h3 class="section-title">All Comments</h3>
+        <ul class="comment-list">
+          {{#each post.comments}}
+            <li class="comment">
+              <div class="comment-header">
+                <span class="comment-author">{{this.user.username}}</span>
+                <span class="comment-time">{{formatTimeAgo this.createdAt}}</span>
+              </div>
+              <div class="comment-body">
+                <p>{{this.comment_text}}</p>
+                {{#if (eq this.user.id ../currentUserID)}}
+                  <button class="btn btn-custom delete-comment" data-comment-id="{{this.id}}"><i
+                    class='bx bx-trash-alt'></i></button>
+                {{/if}}
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{else}}
+      <div class="alert alert-danger" role="alert">
+        No comments yet!
+      </div>
+  {{/if}}
+
+  {{else}}
+    <div class="alert alert-dangder" role="alert">
+      Post not found.
+    </div>
+  {{/if}}
+    <script src="/js/comment.js"></script>
+</div>

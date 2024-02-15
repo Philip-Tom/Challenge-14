@@ -1,0 +1,34 @@
+<!-- views/new-post.handlebars -->
+<div class="container-sm mx-auto">
+  {{#if loggedIn}}
+    <h2 class="mb-5">Create a New Post</h2>
+
+    <form id="create-post-form" action="/posts/" method="POST">
+      <div class="form-group mb-3">
+        <label for="title">Title:</label>
+        <input
+          type="text"
+          name="title"
+          required
+          class="form-control"
+          id="title"
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="content">Content:</label>
+        <textarea
+          name="content"
+          rows="5"
+          required
+          id="content"
+          class="form-control"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-custom mb-3">Create Post</button>
+    </form>
+  {{else}}
+    <div class="alert alert-warning" role="alert">
+      You must be logged in to create a new post
+    </div>
+  {{/if}}
+</div>

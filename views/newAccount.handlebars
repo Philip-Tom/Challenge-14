@@ -1,0 +1,32 @@
+<style>
+  .container-sm { max-width: 600px; margin: auto; } .form-group { display: flex;
+  flex-direction: column; margin-bottom: 1rem; } label { color: #231010; }
+  .form-control { border-color: #231010; background-color: transparent; }
+  .btn-custom { border-color: #231010 background-color: transparent; color: #fff; }
+</style>
+
+<div class="container-sm mx-auto">
+  <h2 class="mb-3">Sign Up</h2>
+
+  <form action="/users" method="POST">
+    <div class="form-group mb-3">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" name="username" />
+    </div>
+    <div class="form-group mb-3">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+      />
+    </div>
+    <button type="submit" class="btn btn-custom mb-3">Create Account</button>
+    {{#if errorMessage}}
+      <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+    {{/if}}
+  </form>
+
+  <p class="fw-light">Already have an account? <a href="/login">Log in</a></p>
+</div>

@@ -1,0 +1,38 @@
+<div class="container-sm mx-auto">
+{{#if loggedIn}}
+      <h5>Edit Post</h5>
+  
+      <form id="edit-post-form">
+        <input type="hidden" name="postIdEdit" value="{{post.id}}" />
+        <div class="form-group mb-3">
+          <label for="title-input">Title:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title-input"
+            name="title"
+            value="{{post.title}}"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="post-text-input">Content</label>
+          <textarea
+            class="form-control"
+            id="post-text-input"
+            name="content"
+            rows="5"
+          >{{post.content}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-custom">Update Post</button>
+
+        {{#if errorMessage}}
+          <div class="alert alert-danger" role="alert">{{errorMessage}}</div>
+        {{/if}}
+      </form>
+
+    </div>
+  </div>
+  <script src="/js/post.js"></script>
+{{/if}}
+
+</div>

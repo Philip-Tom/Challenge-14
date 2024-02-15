@@ -1,0 +1,16 @@
+<div class="container-sm mx-auto">
+  {{#each posts}}
+  <div class="card mb-3">
+    
+    <div class="card-header">
+      <h2 class="card-title">{{title}}</h2>
+      <p class="card-created-at">Posted by {{loggedIn}} {{user.username}} on {{formatDate createdAt}}</p>
+    </div>
+    <div class="card-body">
+      <p>{{content}}</p>
+      <a href="/posts/{{id}}" class="read-more">Read More</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
