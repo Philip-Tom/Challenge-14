@@ -62,3 +62,6 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 ## ScreenShots
 ![Dashboard](<assets/Screenshot 2024-02-15 140229.png>)
+
+## Heroku Url
+[Deployed Link](https://tech-bog-2324057bbada.herokuapp.com/) Enjoy!!!
